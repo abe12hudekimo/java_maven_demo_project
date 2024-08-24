@@ -7,11 +7,16 @@ import org.junit.Test;
 
 public class GreeterTest {
   
-  private Greeter greeter = new Greeter();
+  private final Greeter greeter = new Greeter();
 
   @Test
   public void greeterSaysHello() {
     assertThat(greeter.sayHello(), containsString("Hello"));
+  }
+  @Test
+  public void greeterSaysAnyThing() {
+    String result = greeter.sayAnything("テストメソッド");
+    assertThat(result, containsString("テストメソッドが呼ばれた!"));
   }
 
 }
