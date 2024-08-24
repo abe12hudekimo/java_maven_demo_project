@@ -17,6 +17,7 @@ public class GreeterTest {
   public void greeterSaysAnyThing() {
     String result = greeter.sayAnything("テストメソッド");
     assertThat(result, containsString("テストメソッドが呼ばれた!"));
+    System.out.println(result);
   }
 
 }
